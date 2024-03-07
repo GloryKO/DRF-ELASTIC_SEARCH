@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'rest_framework'
+    'rest_framework',
+    'search'
 ]
 
 MIDDLEWARE = [
@@ -126,4 +127,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 25
+}
+
+
+ELASTICSEARCH_DSL = {
+    "default": {
+        "hosts": "https://localhost:9200", #specify the port where the elastic search instance is running   
+        #"http_auth": ("elastic", "YOUR_PASSWORD"), #verify authorized access to elastic search
+        #"ca_certs": "PATH_TO_http_ca.crt", #establish secure connections btw the app and elastic search
+    }
 }

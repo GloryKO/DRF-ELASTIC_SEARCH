@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from search.views import *
 
 # Create your views here.
 from rest_framework import viewsets
