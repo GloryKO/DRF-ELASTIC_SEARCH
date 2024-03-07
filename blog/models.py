@@ -9,12 +9,13 @@ class Category(models.Model):
 
     class Meta:
             verbose_name_plural = "categories"
+
     def __str__(self):
-          return self.name
+          return f"{self.name}"
 
 ARTICLE_TYPES = [
     ("UN", "Unspecified"),
-    ("TU", "Tutorial"),
+    ("TU", "Tutorial"), 
     ("RS", "Research"),
     ("RW", "Review"),
 ]
