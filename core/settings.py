@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_elasticsearch_dsl',
     'blog',
     'rest_framework',
     'search'
@@ -132,7 +133,7 @@ REST_FRAMEWORK = {
 
 ELASTICSEARCH_DSL = {
     "default": {
-        "hosts": "https://localhost:9200", #specify the port where the elastic search instance is running   
+        "hosts": "http://localhost:9200", #specify the port where the elastic search instance is running   
         #"http_auth": ("elastic", "YOUR_PASSWORD"), #verify authorized access to elastic search
         #"ca_certs": "PATH_TO_http_ca.crt", #establish secure connections btw the app and elastic search
     }
